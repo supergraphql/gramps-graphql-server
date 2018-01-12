@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import {prepare} from '@gramps/gramps'
-import XKCD from '@gramps/data-source-xkcd'
-import Numbers from '@gramps/data-source-numbers'
+import XKCD from './data-source-xkcd'
+import Numbers from './data-source-numbers'
 import {printSchema} from 'graphql'
 
 const gramps = prepare({ dataSources: [
