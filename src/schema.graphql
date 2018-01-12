@@ -1,0 +1,10 @@
+# import XKCD_Comic, Numbers_Trivia from "./generated/gramps.graphql"
+
+type Query {
+  getComicAndTrivia: ComicAndTrivia
+}
+
+type ComicAndTrivia {
+  comic: XKCD_Comic
+  trivia: Numbers_Trivia
+}

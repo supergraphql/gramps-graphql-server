@@ -1,0 +1,65 @@
+type Query {
+  getComicAndTrivia: ComicAndTrivia
+}
+
+type ComicAndTrivia {
+  comic: XKCD_Comic
+  trivia: Numbers_Trivia
+}
+"""
+Details about an xkcd comic.
+"""
+type XKCD_Comic {
+  """
+  The unique ID of the comic.
+  """
+  num: ID!
+  """
+  The title of the comic.
+  """
+  title: String!
+  """
+  As far as I can tell, this is always the same as the title field.
+  """
+  safe_title: String!
+  """
+  Direct link to the comic image.
+  """
+  img: String!
+  """
+  Alt text (this is what shows on hover in comics on the site).
+  """
+  alt: String!
+  """
+  A transcript of what’s happening in the comic.
+  """
+  transcript: String
+  """
+  The year the comic was released.
+  """
+  year: String
+  """
+  The month the comic was released.
+  """
+  month: String
+  """
+  The day the comic was released.
+  """
+  day: String
+  """
+  A link to the comic on xkcd.com
+  """
+  link: String
+  """
+  Additional info, shown on the xkcd website in the banner.
+  """
+  news: String
+}
+
+type Numbers_Trivia {
+  text: String!
+  found: Boolean!
+  number: Int!
+  type: String!
+  date: String!
+}
