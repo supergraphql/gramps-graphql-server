@@ -8,6 +8,6 @@ projects:
   xkcd:
     schemaPath: src/generated/gramps.graphql
     extensions:
-      # prepare-binding: 
-      #   output: src/generated/gramps.ts
-      #   generator: binding-ts
+      prepare-binding: 
+        output: src/generated/gramps.ts
+        generator: binding-ts

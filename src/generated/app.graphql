@@ -1,11 +1,12 @@
-type Query {
-  getComicAndTrivia: ComicAndTrivia
-}
-
 type ComicAndTrivia {
   comic: XKCD_Comic
   trivia: Numbers_Trivia
 }
+
+type Query {
+  getComicAndTrivia: ComicAndTrivia
+}
+
 """
 Details about an xkcd comic.
 """

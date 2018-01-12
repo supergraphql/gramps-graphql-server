@@ -53,13 +53,13 @@ export interface Schema {
 }
 
 export type Query = {
-  grampsVersion: (args: {}, context, info?: GraphQLResolveInfo | string) => Promise<String>
-  getLatestComic: (args: {}, context, info?: GraphQLResolveInfo | string) => Promise<XKCD_Comic | null>
-  getComicById: (args: { id: ID_Output }, context, info?: GraphQLResolveInfo | string) => Promise<XKCD_Comic | null>
-  trivia: (args: { number: Int }, context, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
-  date: (args: { date: String }, context, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
-  math: (args: { number: Int }, context, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
-  year: (args: { number: Int }, context, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
+  grampsVersion: (args: {}, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<String>
+  getLatestComic: (args: {}, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<XKCD_Comic | null>
+  getComicById: (args: { id: ID_Output }, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<XKCD_Comic | null>
+  trivia: (args: { number: Int }, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
+  date: (args: { date: String }, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
+  math: (args: { number: Int }, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
+  year: (args: { number: Int }, context: { [key: string]: any }, info?: GraphQLResolveInfo | string) => Promise<Numbers_Trivia>
 }
 
 export class Binding extends BaseBinding {

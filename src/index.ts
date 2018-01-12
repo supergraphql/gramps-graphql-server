@@ -10,9 +10,14 @@ const resolvers = {
     async getComicAndTrivia(parent, args, ctx: Context, info) {
       const comic = await ctx.binding.query.getLatestComic({}, ctx)
       const { day, month } = comic
-      const trivia = await ctx.binding.query.date({ date: `${month}/${day}`}, ctx)
+      const trivia = await ctx.binding.query.date({ date: `${month}/${day}` }, ctx)
       return { comic, trivia }
     },
+    hello(parent, args, ctx, info) {
+      console.log(info);
+      console.log(info.fieldNodes)
+      return 'Hello'
+    }
   }
 }
 
